@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.citrus.myproject.SampleTestNGDataProviderDemo" time="0.0" tests="3" errors="0" skipped="0" failures="0">
+    <testcase name="SampleTestNGDataProviderDemo.testDataProviders" classname="com.citrus.myproject.SampleTestNGDataProviderDemo" time="0.0"/>
+    <testcase name="SampleTestNGDataProviderDemo.testDataProviders" classname="com.citrus.myproject.SampleTestNGDataProviderDemo" time="0.0"/>
+    <testcase name="SampleTestNGDataProviderDemo.testDataProviders" classname="com.citrus.myproject.SampleTestNGDataProviderDemo" time="0.0"/>
+</testsuite>

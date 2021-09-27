@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:citrus="http://www.citrusframework.org/schema/config"
+	xmlns:citrus-jms="http://www.citrusframework.org/schema/jms/config"
+	xmlns:citrus-ws="http://www.citrusframework.org/schema/ws/config"
+	xmlns:citrus-http="http://www.citrusframework.org/schema/http/config"
+	xmlns:citrus-test="http://www.citrusframework.org/schema/testcase"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.citrusframework.org/schema/config http://www.citrusframework.org/schema/config/citrus-config.xsd
+       http://www.citrusframework.org/schema/jms/config http://www.citrusframework.org/schema/jms/config/citrus-jms-config.xsd
+       http://www.citrusframework.org/schema/ws/config http://www.citrusframework.org/schema/ws/config/citrus-ws-config.xsd
+       http://www.citrusframework.org/schema/http/config http://www.citrusframework.org/schema/http/config/citrus-http-config.xsd
+       http://www.citrusframework.org/schema/testcase http://www.citrusframework.org/schema/testcase/citrus-testcase.xsd
+       http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+
+	<jdbc:embedded-database id="dataSource"
+		type="H2">
+		<jdbc:script location="classpath:sql/create-table.sql" />
+		<jdbc:script location="classpath:sql/insert-data.sql" />
+	</jdbc:embedded-database>
+
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- Common settings -->
+	<context:property-placeholder
+		location="classpath:citrus.properties" />
+
+	<citrus:schema-repository
+		id="schemaRepository" />
+
+
+	<citrus:global-variables>
+		<citrus:variable name="project.name"
+			value="Citrus Integration Tests" />
+		<citrus:file path="citrus.properties" />
+	</citrus:global-variables>
+
+	<!-- <citrus-http:client id="customerClient" request-url="http://localhost:8080/customers"/> -->
+
+</beans>

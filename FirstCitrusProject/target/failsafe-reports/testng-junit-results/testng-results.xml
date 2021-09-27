@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="320" started-at="2020-09-28T18:47:27Z" finished-at="2020-09-28T18:47:27Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="320" started-at="2020-09-28T18:47:27Z" finished-at="2020-09-28T18:47:27Z">
+      <class name="com.citrus.myproject.SampleJavaRunnerIT">
+        <test-method status="PASS" signature="testLogService()" name="testLogService" duration-ms="118" started-at="2020-09-29T00:17:27Z" finished-at="2020-09-29T00:17:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogService -->
+      </class> <!-- com.citrus.myproject.SampleJavaRunnerIT -->
+      <class name="com.citrus.myproject.SampleJavaJunit4IT">
+        <test-method status="PASS" signature="sayHelloFromJunit()" name="sayHelloFromJunit" duration-ms="142" started-at="2020-09-29T00:17:27Z" finished-at="2020-09-29T00:17:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sayHelloFromJunit -->
+      </class> <!-- com.citrus.myproject.SampleJavaJunit4IT -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

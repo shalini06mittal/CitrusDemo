@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 5, Time elapsed: 3.396 s <<< FAILURE! - in TestSuite
+springTestContextPrepareTestInstance(com.citrus.myproject.SampleCitrusFunctionsDemoIT)  Time elapsed: 0.148 s  <<< FAILURE!
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.citrus.myproject.SampleCitrusFunctionsDemoIT': Unsatisfied dependency expressed through field 'httpclient'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.consol.citrus.http.client.HttpClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.consol.citrus.http.client.HttpClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+

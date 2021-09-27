@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spring:beans
+	xmlns="http://www.citrusframework.org/schema/testcase"
+	xmlns:jms="http://www.citrusframework.org/schema/jms/testcase"
+	xmlns:ws="http://www.citrusframework.org/schema/ws/testcase"
+	xmlns:spring="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+                  http://www.citrusframework.org/schema/jms/testcase http://www.citrusframework.org/schema/jms/testcase/citrus-jms-testcase.xsd
+                  http://www.citrusframework.org/schema/ws/testcase http://www.citrusframework.org/schema/ws/testcase/citrus-ws-testcase.xsd
+                  http://www.citrusframework.org/schema/testcase http://www.citrusframework.org/schema/testcase/citrus-testcase.xsd">
+
+	<testcase name="SampleXmlIT">
+		<meta-info>
+			<author>Shalini Mittal</author>
+			<creationdate>2013-01-01</creationdate>
+			<status>DRAFT</status>
+			<last-updated-by>Shalini MIttal</last-updated-by>
+			<last-updated-on>2013-01-01T00:00:00</last-updated-on>
+
+		</meta-info>
+
+		<description>This is a sample Citrus integration test</description>
+
+		<variables>
+			<variable name="mydate" value="date" />
+			<variable name="persons">
+				<value>
+					<data>
+					 <![CDATA[ 
+					<persons> <person> <name>Theodor</name> 
+					<age>10</age> </person> 
+					<person> <name>Alvin</name> <age>9</age> 		</person> 
+					</persons> 
+					]]> 
+		</data>
+				</value>
+			</variable>
+		</variables>
+
+
+		<actions>
+			<echo>
+				<message>Today is: ${mydate} !!!!</message>
+			</echo>
+			<echo>
+				<message>Persons data is ${persons} !!!!</message>
+			</echo>
+			 <sql datasource="dataSource"
+		         transaction-manager="txManager">
+		        <statement>select count(*) from user_detail</statement>
+		        <statement>select first_name from user_detail where ID='7'</statement>
+		        
+		        <validate column="first_name" value="Soumitra"/>
+		         <validate column="COUNT(*)" value="2"/>
+		    </sql>
+		</actions>
+		
+		
+	</testcase>
+	
+</spring:beans>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.citrus.myproject.SmapleVariableDemo" time="0.0" tests="2" errors="0" skipped="0" failures="0">
+    <testcase name="SmapleVariableDemo.testVariable1" classname="com.citrus.myproject.SmapleVariableDemo" time="0.0"/>
+    <testcase name="SmapleVariableDemo.testVariable2" classname="com.citrus.myproject.SmapleVariableDemo" time="0.0"/>
+</testsuite>

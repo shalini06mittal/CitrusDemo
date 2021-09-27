@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]">
+  <test name="Surefire test(failed)">
+    <classes>
+      <class name="com.citrus.myproject.SampleCitrusFunctionsDemoIT">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="afterSuite"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="testJsonFunctions"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.citrus.myproject.SampleCitrusFunctionsDemoIT -->
+      <class name="com.citrus.myproject.SampleJavaIDesignerDrawbackIT">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="testLogService"/>
+          <include name="afterSuite"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.citrus.myproject.SampleJavaIDesignerDrawbackIT -->
+      <class name="com.citrus.myproject.SampleXmlIT">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="sampleXml"/>
+          <include name="afterSuite"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.citrus.myproject.SampleXmlIT -->
+      <class name="com.citrus.myproject.SampleJavaIT">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="afterSuite"/>
+          <include name="echoToday"/>
+          <include name="sayHello"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- com.citrus.myproject.SampleJavaIT -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->
